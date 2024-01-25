@@ -5,7 +5,7 @@ on:
 
 jobs:
   continuous-integration:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     steps:
       - name: Obtener los últimos cambios del repositorio
         uses: actions/checkout@v4
@@ -14,10 +14,10 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          version: 17
+          java-version: 17
 
       - name: Configuración de Gradle
         uses: gradle/gradle-build-action@v2
 
       - name: Compilar el proyecto
-        run: gradle build
+        run: gradle build 
